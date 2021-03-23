@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <title>sws</title>
+    <link rel="stylesheet" href="src/reveal.css">
+    <link rel="stylesheet" href="src/blood.css">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <section>
+                <h1>GREAT BOOK STORE</h1>
+                <p>интернет магазин литературы</p>
+            </section>
+            <section>
+                <h2>описание</h2>
+                <p style="text-align: justify;">Проект представляет собой магазин, оказывающий услуги по продаже
+                    литературных изданий. Любой
+                    покупатель может найти его через поисковую систему, выбрать товар из списка предложенных, добавить
+                    его в корзину и оформить покупку. При желании он может создать учетную запись, добавлять товары в
+                    избранное, просматривать историю покупок.</p>
+            </section>
+            <section>
+                <h2>наши преимущества</h2>
+                <ul>
+                    <li>Гарантия качества товаров</li>
+                    <li>Широкий ассортимент продукции</li>
+                    <li>Разработанная система скидок</li>
+                    <li>Быстрая окупаемость проекта</li>
+                    <li>Оперативная обработка клиентских запросов</li>
+                </ul>
+            </section>
+            <section>
+                <section>
+                    <h3>главная страница</h3>
+                    <img src="captures/main.jpg" width="600px">
+                </section>
+                <section>
+                    <h3>страница товара</h3>
+                    <img src="captures/prod.PNG" width="600px">
+                </section>
+                <section>
+                    <h3>форма покупки</h3>
+                    <img src="captures/getorder.jpg" width="600px">
+                </section>
+            </section>
+            <section>
+                <h2>видео продукта</h2>
+                <video src="video/lab3.mp4" controls="controls">Тег video не поддерживается вашим браузером.</video>
+            </section>
+            <section>
+                <div class="container">
+                    <form id="contact" action="" method="post">
+                        <h3>СВЯЖИТЕСЬ С НАМИ</h3>
+                        <fieldset>
+                            <input placeholder="имя" type="text" tabindex="1" required oninput="setCustomValidity('')"
+                                oninvalid="setCustomValidity('Заполните поле')" />
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="e-mail" type="email" tabindex="2" required
+                                oninput="setCustomValidity('')" oninvalid="setCustomValidity('Заполните поле')">
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="номер телефона" type="tel" tabindex="3">
+                        </fieldset>
+                        <fieldset>
+                            <input placeholder="ссылка на ваш сайт http://" type="url" tabindex="4">
+                        </fieldset>
+                        <fieldset>
+                            <textarea placeholder="Ваши мысли..." tabindex="5" required oninput="setCustomValidity('')"
+                                oninvalid="setCustomValidity('Заполните поле')"></textarea></textarea>
+                        </fieldset>
+                        <fieldset>
+                            <button name="submit" type="submit" id="contact-submit"
+                                data-submit="...Sending">Submit</button>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script src="./dist/main.js"></script>
+	<script type="text/javascript">
+		document.body.addEventListener('wheel', (ev) => {
+				if (ev.deltaY < 0) {
+					// right / down
+					if (reveal.availableRoutes().down) {
+						reveal.down();
+					} else {
+						reveal.right();
+					}
+				}
+				if (ev.deltaY > 0) {
+					// left / up
+					if (reveal.availableRoutes().up) {
+						reveal.up()
+					} else {
+						reveal.left();
+					}
+				}
+			}
+		)
+	</script>
+</body>
+
+</html>
